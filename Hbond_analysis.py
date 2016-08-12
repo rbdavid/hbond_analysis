@@ -46,7 +46,7 @@ def summary(nSteps):
     sum_file.write('\nTotal number of steps analyzed: %d\n' %(nSteps))
     sum_file.write('\nAtom Selections analyzed:n')
     for i in range(nSel):
-        sum_file.write('%02d  %s %s\n' %(i,sel[i][1],sel[i][2],sel[i][3]))
+        sum_file.write('%02d  %s %s %s\n' %(i,sel[i][1],sel[i][2],sel[i][3]))
     sum_file.close()
 
 # ----------------------------------------
