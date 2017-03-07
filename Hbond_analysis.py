@@ -12,12 +12,13 @@ import sys
 import os
 import MDAnalysis
 import MDAnalysis.analysis.hbonds as hbonds
+from sel_list import *
 
 # VARIABLE DECLARATION:
 config_file = sys.argv[1]
 
-necessary_parameters = ['pdb','traj_loc','start','end','selection_input_filename','hbond_distance_max','hbond_angle_min']
-all_parameters = ['pdb','traj_loc','start','end','selection_input_filename','hbond_distance_max','hbond_angle_min']
+necessary_parameters = ['pdb','traj_loc','start','end','hbond_distance_max','hbond_angle_min']
+all_parameters = ['pdb','traj_loc','start','end','hbond_distance_max','hbond_angle_min']
 
 flush = sys.stdout.flush
 
@@ -61,8 +62,6 @@ def config_parser(config_file):	# Function to take config file and create/fill t
 # CREATING PARAMETER DICTIONARY
 parameters = {}
 config_parser(config_file)
-selection_input_filename = parameters['selection_input_filename']
-from selection_input_filename import *
 
 nSel = len(sel)
 hbond_distance_max = float(parameters['hbond_distance_max'])
