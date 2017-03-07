@@ -76,7 +76,7 @@ output_file_list = []
 count = 0
 for i in sel:
 	h = hbonds.HydrogenBondAnalysis(u,selection1=i[1],selection2=i[2],selection1_type='both',update_selection1=False,update_selection2=False,detect_hydrogens='distance',distance=hbond_distance_max,angle=hbond_angle_min,donors=i[3],acceptors=i[4])
-	h_list.append(h)
+	h_sel_list.append(h)
 	temp = open('%02d.%s.num_hbonds.dat' %(count,i[0]),'w')
 	output_file_list.append(temp)
 	count += 1
@@ -91,12 +91,12 @@ while start <= end:
 	nSteps += len(u.trajectory)
 	# Loop through all residue pair selections, calculate the Hydrogen Bond distances and angles for all pairs;  
 	for i in range(nSel):
-		h_list[i].run()
+		h_sel_list[i].run()
 		# SAVE THE NUMBER OF HBONDS IN THE TIMESERIES
 		np.savetxt(output_file_list[i],[int(j[1]) for j in h.count_by_time()])
 
-		h_list[i].generate_table()
-		h_list[i].save_table(filename='%03d.hbond_table.pickle'%(start))
+		h_sel_list[i].generate_table()
+		h_sel_list[i].save_table(filename='%03d.hbond_table.pickle'%(start))
 
 	ffprint('Finished analyzing trajectory %02d\n' %(start_traj))
 	start_traj += 1
