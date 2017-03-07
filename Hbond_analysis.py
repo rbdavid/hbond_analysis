@@ -33,8 +33,6 @@ def config_parser(config_file):	# Function to take config file and create/fill t
 		parameters[necessary_parameters[i]] = ''
 
 	# SETTING DEFAULT PARAMETERS FOR OPTIONAL PARAMETERS:
-#	parameters['alignment'] = 'protein'
-#	parameters['solvent_resname'] = 'WAT'
 #	parameters['write_summary'] = False
 #	parameters['summary_filename'] = None
 
@@ -96,21 +94,15 @@ while start <= end:
 		h_list[i].run()
 		# SAVE THE NUMBER OF HBONDS IN THE TIMESERIES
 		np.savetxt(output_file_list[i],[int(j[1]) for j in h.count_by_time()])
-		
-		#htimeseries = h_list[i].timeseries     
-		#for j in range(len(u.trajectory)):
-		#	if len(htimeseries[j]) != 0:
-		#		for k in range(len(htimeseries[j])):
-		#			out1.write('%10d   %10d   %10d    %f   %f\n' %(temp,htimeseries[j][k][0],htimeseries[j][k][1],htimeseries[j][k][-2],htimeseries[j][k][-1]))
-		#		temp += 1
-		#	else:
-		#		temp += 1
-		#out1.close()
-# Change directories back to parent directory, iterate to the next trajectory....REPEAT 
-		#os.chdir('..')
+
+		h_list[i].generate_table()
+		h_list[i].save_table(filename='%03d.hbond_table.pickle'%(start))
 
 	ffprint('Finished analyzing trajectory %02d\n' %(start_traj))
 	start_traj += 1
+
+for i in range(len(output_file_list)):
+	output_file_list[i].close()
 
 ffprint('Analyzed %d steps.' %(nSteps))
 #summary(nSteps)
