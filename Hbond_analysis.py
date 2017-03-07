@@ -61,11 +61,11 @@ def config_parser(config_file):	# Function to take config file and create/fill t
 # CREATING PARAMETER DICTIONARY
 parameters = {}
 config_parser(config_file)
-from paramters['selelection_input_filename'] import *
+from parameters['selelection_input_filename'] import *
 
 nSel = len(sel)
-hbond_distance_max = float(paramters['hbond_distance_max'])
-hbond_angle_min = float(paramters['hbond_angle_min'])
+hbond_distance_max = float(parameters['hbond_distance_max'])
+hbond_angle_min = float(parameters['hbond_angle_min'])
 
 # ----------------------------------------
 # INITIALIZING UNIVERSE
