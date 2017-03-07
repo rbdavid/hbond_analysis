@@ -61,7 +61,7 @@ def config_parser(config_file):	# Function to take config file and create/fill t
 # CREATING PARAMETER DICTIONARY
 parameters = {}
 config_parser(config_file)
-from paramters['sel_list'] import *
+from paramters['selelection_input_filename'] import *
 
 nSel = len(sel)
 hbond_distance_max = float(paramters['hbond_distance_max'])
