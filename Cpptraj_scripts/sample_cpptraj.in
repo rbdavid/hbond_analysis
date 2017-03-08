@@ -1,0 +1,33 @@
+parm ../../truncated.prmtop
+trajin AAA
+
+	# HBONDS OF THE ATP/ADP/Pi MOLECULES
+#hbond atp out atp.hbond.dat avgout atp.avg_hbond.dat printatomnum series uuseries atp.hbond_timeseries.dat :1-451 acceptormask :atp dist CCC angle DDD 
+#hbond adp out adp.hbond.dat avgout adp.avg_hbond.dat printatomnum series uuseries adp.hbond_timeseries.dat :1-451 acceptormask :adp dist CCC angle DDD 
+#hbond PHX_donor out PHX_donor.hbond.dat avgout PHX_donor.avg_hbond.dat printatomnum series uuseries PHX_donor.hbond_timeseries.dat :1-451 donormask :PHX dist CCC angle DDD 
+#hbond PHX_acceptor out PHX_acceptor.hbond.dat avgout PHX_acceptor.avg_hbond.dat printatomnum series uuseries PHX_acceptor.hbond_timeseries.dat :1-451 acceptormask :PHX dist CCC angle DDD 
+	# HBONDS OF THE RNA PHOSPHATE GROUPS (PROTEIN-RNA PHOSPHATES)
+hbond phosphate1 out phosphate1.hbond.dat avgout phosphate1.avg_hbond.dat printatomnum series uuseries phosphate1.hbond_timeseries.dat :1-451 acceptormask :452@O3',:453@OP1,OP2,O5' dist CCC angle DDD 
+hbond phosphate2 out phosphate2.hbond.dat avgout phosphate2.avg_hbond.dat printatomnum series uuseries phosphate2.hbond_timeseries.dat :1-451 acceptormask :453@O3',:454@OP1,OP2,O5' dist CCC angle DDD
+hbond phosphate3 out phosphate3.hbond.dat avgout phosphate3.avg_hbond.dat printatomnum series uuseries phosphate3.hbond_timeseries.dat :1-451 acceptormask :454@O3',:455@OP1,OP2,O5' dist CCC angle DDD
+hbond phosphate4 out phosphate4.hbond.dat avgout phosphate4.avg_hbond.dat printatomnum series uuseries phosphate4.hbond_timeseries.dat :1-451 acceptormask :455@O3',:456@OP1,OP2,O5' dist CCC angle DDD
+hbond phosphate5 out phosphate5.hbond.dat avgout phosphate5.avg_hbond.dat printatomnum series uuseries phosphate5.hbond_timeseries.dat :1-451 acceptormask :456@O3',:457@OP1,OP2,O5' dist CCC angle DDD
+hbond phosphate6 out phosphate6.hbond.dat avgout phosphate6.avg_hbond.dat printatomnum series uuseries phosphate6.hbond_timeseries.dat :1-451 acceptormask :457@O3',:458@OP1,OP2,O5' dist CCC angle DDD
+	# HBONDS OF PROTEIN RESIDUES (ACTING AS DONOR OR ACCEPTOR)
+hbond 058ARG_donor out 058ARG_donor.hbond.dat avgout 058ARG_donor.avg_hbond.dat printatomnum series uuseries 058ARG_donor.hbond_timeseries.dat :1-BBB donormask :58 dist CCC angle DDD 
+hbond 058ARG_acceptor out 058ARG_acceptor.hbond.dat avgout 058ARG_acceptor.avg_hbond.dat printatomnum series uuseries 058ARG_acceptor.hbond_timeseries.dat :1-BBB acceptormask :58 dist CCC angle DDD 
+hbond 077THR_donor out 077THR_donor.hbond.dat avgout 077THR_donor.avg_hbond.dat printatomnum series uuseries 077THR_donor.hbond_timeseries.dat :1-BBB donormask :77 dist CCC angle DDD 
+hbond 077THR_acceptor out 077THR_acceptor.hbond.dat avgout 077THR_acceptor.avg_hbond.dat printatomnum series uuseries 077THR_acceptor.hbond_timeseries.dat :1-BBB acceptormask :77 dist CCC angle DDD 
+hbond 097THR_donor out 097THR_donor.hbond.dat avgout 097THR_donor.avg_hbond.dat printatomnum series uuseries 097THR_donor.hbond_timeseries.dat :1-BBB donormask :97 dist CCC angle DDD 
+hbond 097THR_acceptor out 097THR_acceptor.hbond.dat avgout 097THR_acceptor.avg_hbond.dat printatomnum series uuseries 097THR_acceptor.hbond_timeseries.dat :1-BBB acceptormask :97 dist CCC angle DDD 
+hbond 219SER_donor out 219SER_donor.hbond.dat avgout 219SER_donor.avg_hbond.dat printatomnum series uuseries 219SER_donor.hbond_timeseries.dat :1-BBB donormask :219 dist CCC angle DDD 
+hbond 219SER_acceptor out 219SER_acceptor.hbond.dat avgout 219SER_acceptor.avg_hbond.dat printatomnum series uuseries 219SER_acceptor.hbond_timeseries.dat :1-BBB acceptormask :219 dist CCC angle DDD 
+hbond 220ARG_donor out 220ARG_donor.hbond.dat avgout 220ARG_donor.avg_hbond.dat printatomnum series uuseries 220ARG_donor.hbond_timeseries.dat :1-BBB donormask :220 dist CCC angle DDD 
+hbond 220ARG_acceptor out 220ARG_acceptor.hbond.dat avgout 220ARG_acceptor.avg_hbond.dat printatomnum series uuseries 220ARG_acceptor.hbond_timeseries.dat :1-BBB acceptormask :220 dist CCC angle DDD 
+hbond 221LYS_donor out 221LYS_donor.hbond.dat avgout 221LYS_donor.avg_hbond.dat printatomnum series uuseries 221LYS_donor.hbond_timeseries.dat :1-BBB donormask :220 dist CCC angle DDD 
+hbond 221LYS_acceptor out 221LYS_acceptor.hbond.dat avgout 221LYS_acceptor.avg_hbond.dat printatomnum series uuseries 221LYS_acceptor.hbond_timeseries.dat :1-BBB acceptormask :220 dist CCC angle DDD 
+hbond 241THR_donor out 241THR_donor.hbond.dat avgout 241THR_donor.avg_hbond.dat printatomnum series uuseries 241THR_donor.hbond_timeseries.dat :1-BBB donormask :241 dist CCC angle DDD 
+hbond 241THR_acceptor out 241THR_acceptor.hbond.dat avgout 241THR_acceptor.avg_hbond.dat printatomnum series uuseries 241THR_acceptor.hbond_timeseries.dat :1-BBB acceptormask :241 dist CCC angle DDD 
+
+run
+
